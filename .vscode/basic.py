@@ -46,3 +46,4 @@ print(str10.lower())
 print(str10.isupper())
 
 print(str10[0:2])
+print(str10[1:3])
