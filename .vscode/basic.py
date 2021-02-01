@@ -403,3 +403,51 @@ print(model2.show())
 #상속정보 //뭘상속받았는지알수있다.
 #다중상속도 가능. ()오브젝트안에 부모클래스를 넣어주면된다.
 print(BmwCar.mro())
+
+#모듈? - 폴더 안 파일하나하나(식기)
+#패키지? - 파일하나하나를 뭉쳐논것 구조적으로관리하는것.폴더 (부엌)
+#모듈 불러오기? 
+# (클래스사용)from 패키지이름.패키지안에파일이름 import 파일안의클래스이름 //그럼 그 클래스안의 함수 쓸수있음.
+# (함수사용)from 패키지이름.패키지안의파일이름 import 사용할함수이름//하면 함수사용가능.
+# 근데 파일안의모듈이름이 너무 길면 as a 해서 짧게 쓸수있음.
+#상대경로 .. -> 부모디렉토리로 .->현재디렉토리
+
+
+#파일 읽기,쓰기
+#읽기모드 : r, 쓰기모드(기존파일삭제):w ,추가모드(파일생성 또는 추가):a
+
+#파일읽기
+# f=open('./폴더/파일이름.txt','r')
+# content=f.read()
+# print(content)
+# f.close()
+
+#같지만 더 편한 파일읽기
+# with open('./폴더/파일이름.txt','r') as f:
+#     c=f.read()
+#     print(c)
+
+#한번읽어오면 커서가 밑으로 내려가므로, 불렀던내용을 다시 불러올순없다.
+
+#한문장씩 읽어오기
+# with open('./폴더/파일이름.txt','r') as f:
+#     line=f.readline()
+#     while line:
+#          print(line,end='gg')
+#          line=f.readline()
+
+
+#응용 5 3 5 1 3  6자리고, 소수3째자리까지 나와라.
+# score=[]
+# with open(~~~) as f:
+#     for line in f:
+#         score.append(int(line))
+#     print(score)
+# print("평균은 {6:3}".format(sum(score)/len(score)))
+
+#파일로 쓰기?
+#with open(~~~,'w') as f:
+#   f.write("~~~")
+
+
+#예외처리하기
